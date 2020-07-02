@@ -11,9 +11,9 @@
     color: #FFF;
     background-color: #0e83cd;
 }
+.btn-white-blue:after{
+    background-color: #FFF;
+}
 .btn-white-blue:hover{
     color: #0e83cd;
-}
-.btn-white-blue:hover::after{
-    background-color: #FFF;
 }
