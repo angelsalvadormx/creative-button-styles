@@ -78,7 +78,21 @@
     width: 100%;
 }
 
-.btn-hover-slash:hover{}
+.btn-hover-slash{
+    overflow: hidden;
+}
+.btn-hover-slash::after{
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-hover-slash:hover::after{
+    height: 260%;
+    opacity: 1;
+}
 
 .btn-hover-center-hor::after{
     width: 0;
@@ -92,6 +106,18 @@
     width: 90%;
     opacity: 1;
 }
-.btn-hover-center-ver:hover{}
+
+.btn-hover-center-ver:after{
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn-hover-center-ver:hover:after{
+    opacity: 1;
+    height: 75%;
+}
 
 
