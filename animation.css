@@ -22,6 +22,7 @@
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     z-index: 1;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 .btn-animation::after{
@@ -78,7 +79,19 @@
 }
 
 .btn-hover-slash:hover{}
-.btn-hover-center-hor:hover{}
+
+.btn-hover-center-hor::after{
+    width: 0;
+    height: 100%;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn-hover-center-hor:hover::after{
+    width: 90%;
+    opacity: 1;
+}
 .btn-hover-center-ver:hover{}
 
 
