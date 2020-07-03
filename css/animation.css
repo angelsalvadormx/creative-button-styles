@@ -23,15 +23,19 @@
     transition: all 0.3s;
     z-index: 1;
     font-family: 'Lato', Calibri, Arial, sans-serif;
+    border: 3px solid;
 }
 
-.btn-animation::after{
+.btn-animation::after,
+.btn-animation::before{
     content: '';
     position: absolute;
-    z-index: -1;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+}
+.btn-animation::after{
+    z-index: -1;
     top: 0;
     left: 0;
 }
@@ -39,14 +43,6 @@
 /* secund kind animation (full)*/
 /* secund direfent kind animation (hor)*/
 
-.btn-hover-top,
-.btn-hover-left,
-.btn-hover-slash,
-.btn-hover-center-hor,
-.btn-hover-center-ver,
-.btn-hover-full{
-    border: 3px solid;
-}
 
 .btn-hover-full::after{
     width: 100%;
@@ -125,5 +121,48 @@
     opacity: 1;
     height: 75%;
 }
+.btn-ar-oL::before,
+.btn-ar-cL::before,
+.btn-ar-cR::before,
+.btn-ar-oR:before{
+    font-size: 25px;
+    position: absolute;
+}
+.btn-ar-oL,
+.btn-ar-oR{
+    overflow: hidden;
+}
+.btn-ar-oR:before{
+    right: -50%;        
+}
+.btn-ar-oR:active::before,
+.btn-ar-oR:hover::before{
+    right: 12%;
+}
 
+.btn-ar-cR::before{
+    right: 20%;
+    opacity: 0;
+}
+.btn-ar-cR:active:before,
+.btn-ar-cR:hover::before{
+    right: 12%;
+    opacity: 1;
+}
 
+.btn-ar-oL::before{
+    left: -20%;
+}
+.btn-ar-oL:active:before{
+.btn-ar-oL:hover:before,
+    left: 12%;
+}
+.btn-ar-cL::before{
+    left: 20%;
+    opacity: 0;
+}
+.btn-ar-cL:active::before,
+.btn-ar-cL:hover::before{
+    left: 12%;
+    opacity: 1;
+}
