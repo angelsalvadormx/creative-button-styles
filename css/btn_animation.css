@@ -39,3 +39,10 @@
 .btn-white-green:hover{
     background-color: #24b662;
 }
+
+.btn-white-aqua::before,
+.btn-white-aqua{
+    border-color: #FFF;
+    background-color: #24e3ec;
+    color: #FFF;
+}
