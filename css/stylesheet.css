@@ -68,3 +68,13 @@ html,body{
     padding: 10px 20px;
 
 }
+#btns-splash{
+    background-color: #3851bc;
+    padding: 10px 20px;
+}
+.btn-mail{
+    width: 75px !important;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 50%;
+}
