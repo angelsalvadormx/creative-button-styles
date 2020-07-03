@@ -33,6 +33,7 @@
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    line-height: 1 !important;
 }
 .btn-animation::after{
     z-index: -1;
@@ -126,7 +127,8 @@
 .btn-ar-cR::before,
 .btn-ar-oR:before{
     font-size: 25px;
-    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .btn-ar-oL,
 .btn-ar-oR{
@@ -153,8 +155,8 @@
 .btn-ar-oL::before{
     left: -20%;
 }
-.btn-ar-oL:active:before{
-.btn-ar-oL:hover:before,
+.btn-ar-oL:active:before,
+.btn-ar-oL:hover:before{
     left: 12%;
 }
 .btn-ar-cL::before{
