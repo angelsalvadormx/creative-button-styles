@@ -214,3 +214,70 @@
 .btn-actn-left:hover::before{
     left: 0;
 }
+.btn-splash:hover{
+    background: rgba(255,255,255,0.05);
+    -webkit-transform: scale(0.93);
+    -moz-transform: scale(0.93);
+    -ms-transform: scale(0.93);
+    transform: scale(0.93);
+    color: #fff;
+}
+.btn-splash-r,
+.btn-splash{
+    position: relative;
+    overflow:visible !important;
+    background: rgba(255,255,255,0.1);
+    -webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+    -moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+    transition: transform ease-out 0.1s, background 0.2s;
+}
+.btn-splash-r::before,
+.btn-splash::before{
+    top: 50%;
+	left: 50%;
+	padding: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+	opacity: 0;
+    transform: translate(-50%,-50%) scale(0.9);
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+}
+.btn-splash-r::before{
+    border-radius: 50%;
+}
+.btn-splash-r:active,
+.btn-splash-r:hover,
+.btn-splash:active,
+.btn-splash:hover{
+	background: rgba(255,255,255,0.05);
+	-webkit-transform: scale(0.93);
+	-moz-transform: scale(0.93);
+	-ms-transform: scale(0.93);
+	transform: scale(0.93);
+	color: #fff;
+}
+.btn-splash-r:hover::before,
+.btn-splash-r:active::before,
+.btn-splash:active::before,
+.btn-splash:hover::before{
+    -webkit-animation: splashEffect 1.3s ease-out 75ms;
+	-moz-animation: splashEffect 1.3s ease-out 75ms;
+	animation: splashEffect 1.3s ease-out 75ms;
+}
+@keyframes splashEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+		transform: translate(-50%,-50%) scale(1.3);
+		opacity: 0;
+	}
+}
