@@ -41,14 +41,41 @@
   #btns-actinos > main {
     width: 70%;
   }
+  .container {
+    padding: 0 20px;
+  }
 }
-@media screen and (max-width:536px){
+@media screen and (max-width:546px){
   #btns-actinos > main{
     width: 100%
   }
-  #btns-splash > main button,
   #btns-actinos > main button{
     margin-right: 0;
     margin-left: 0;
+  }
+   #installation main{
+    overflow: hidden;
+  }
+  #installation .codeToCopy{
+    min-width: 800px;
+  }
+}
+@media screen and (max-width:470px){
+
+  #installation .copy:after{
+    top: -4px;
+    right: 44px;
+  }
+}
+@media screen and (max-width:378px){
+  #installation > article > main{
+    padding: 20px 1em;
+  }
+  #installation .copy{
+    top: 5px;
+  }
+  .btn-animation{
+    margin-right: 0;
+    margin-left: 0
   }
 }
