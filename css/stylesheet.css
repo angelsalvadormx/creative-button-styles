@@ -10,6 +10,10 @@ html,body{
 #home{
     font-family: Oswald, sans-serif;
 }
+
+#installation .codeToCopy{
+    min-width: 510px;
+}
 section > main{
     height: fit-content;
 }
@@ -38,11 +42,36 @@ section{
 #installation > article > main{
     border-radius: 5px;
 }
-#installation > article > main .copy{
+.copy{
     right: 10px;
     top: 10px;
     cursor: pointer;
+    display: block;
+    padding: 0 0 10px 10px;
 }
+.copy.copied::after{
+    content: 'Copied';
+}
+.copy::after{
+    content: 'Copy to clipboard';
+    font-size: 12px;
+    position: absolute;
+    top: -35px;
+    width: max-content;
+    right: -5px;
+    background-color: #1b2223;
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: #FFF;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.copy:hover::after{
+    opacity: 1;
+    z-index: 4;
+}
+
 #installation > article > p{
     margin: 5px 0;
 }
@@ -86,4 +115,18 @@ section{
     padding: 20px;
     font-size: 20px;
     border-radius: 50%;
+}
+#btns-splash button,
+#btns-actinos button,
+#btns-arrows button,
+#btns-hover button{
+    margin-top: 30px !important;
+    z-index: 3;
+}
+#btns-splash .copy,
+#btns-actinos .copy,
+#btns-arrows .copy,
+#btns-hover .copy{
+    top: 0;
+    right: 40px;
 }

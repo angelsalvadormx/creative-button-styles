@@ -2,6 +2,7 @@ const copyButtons = document.getElementsByClassName('copy');
 
 Object.keys(copyButtons).forEach(function(key) {
     copyButtons[key].addEventListener('click',copy);
+    copyButtons[key].addEventListener("mouseout", removeClass);
 });
 
 function copy(){
@@ -13,7 +14,8 @@ function copy(){
     }else{
         text = doc.body.innerHTML;
     }
-    executeCopy(text);    
+    executeCopy(text);   
+    this.classList.add('copied'); 
 }
 
 function executeCopy(text){
@@ -23,4 +25,8 @@ function executeCopy(text){
     input.select();
     document.execCommand('Copy');
     input.remove();
+}
+
+function removeClass(){
+    this.classList.remove('copied');
 }
