@@ -7,7 +7,12 @@ Object.keys(copyButtons).forEach(function(key) {
 function copy(){
     const html = this.parentNode.getElementsByClassName('codeToCopy')[0].innerHTML;
     var doc = new DOMParser().parseFromString(html, 'text/html');
-    var text = doc.body.textContent;
+    var text = '';
+    if(doc.body.firstChild.tagName !== 'BUTTON'){
+        text = doc.body.textContent
+    }else{
+        text = doc.body.innerHTML;
+    }
     executeCopy(text);    
 }
 
