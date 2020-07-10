@@ -6,9 +6,11 @@
 html,body{
     width: 100%;
     height: 100%;
+}
+#home{
     font-family: Oswald, sans-serif;
 }
-section main{
+section > main{
     height: fit-content;
 }
 section{
@@ -29,6 +31,21 @@ section{
     position: sticky;    
 }
 
+#installation > article{
+    margin: 20px 0;
+    padding: 10px 0
+}
+#installation > article > main{
+    border-radius: 5px;
+}
+#installation > article > main .copy{
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+#installation > article > p{
+    margin: 5px 0;
+}
 /* button */
 .btn{
     border: 1px solid black;
